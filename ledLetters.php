@@ -5,7 +5,7 @@ function drawLetter($letter, $color) {
 	for ($i = 0; $i < 8; $i++) {//Controls rows
 		echo "<tr>";
 		for ($j = 0; $j < 8; $j++) {//Controls columns
-            $colorToDisplay = "white";
+            $colorToDisplay = "blue";
 		    $letterToDisplay = "";
 			switch($letter) {
 				case "A" :
@@ -226,7 +226,7 @@ function drawLetter($letter, $color) {
 					break;
 				case "#" :
 					if (1) {
-						if($j == 1 || $j == 2 || $j == 5 || $j == 6 || $i == 1 || $i == 2 || $i == 5 || $i == 6){
+						if($i == 3){
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 						}
@@ -250,7 +250,7 @@ function drawLetter($letter, $color) {
 					}
 					break;
 				case "4" :
-					if (($i < 4 && $j < 2) || $i == 4 || $i == 3 || $j == 6 || $j == 7) {
+					if (($i >= 0 && $i <= 3) && ($j < 2 )||($i >= 0 && $i <= 3) && ($j >= 6 )|| $i ==3|| $i==4 ||($i >=4 && $j >= 6)){
 						$colorToDisplay = $color;
 						$letterToDisplay = $letter;
 					}
